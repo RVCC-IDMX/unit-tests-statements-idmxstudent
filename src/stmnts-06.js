@@ -12,7 +12,7 @@
  * @returns {boolean} true if str is a string
  */
 function isString(str) {
-  // write your code here & return
+  return typeof str === 'string';
 }
 
 /**
@@ -21,19 +21,25 @@ function isString(str) {
  * @returns {boolean}  - true if str is blank (empty)
  */
 function isBlank(str) {
-  // write your code here & return
+  return str === '';
 }
 
 /**
  * Creates a new string by concatenating the given strings
  * @param {string} name - the name of the person
  * @param {string} num - the number to check;
- *  if it is 0, the string starts with 'Hello, '
- *  otherwise, the string starts with 'Bye, '
+ *  if it is 0, the string starts with 'Hello '
+ *  otherwise, the string starts with 'Bye '
  * @returns {string} - the name of the person
  */
 function sayHelloOrBye(name, num) {
-  // write your code here & return
+  let salutation;
+  if (num === 0) {
+    salutation = 'Hello ';
+  } else {
+    salutation = 'Bye ';
+  }
+  return salutation + name;
 }
 
 /**
@@ -44,7 +50,7 @@ function sayHelloOrBye(name, num) {
  * ? [JavaScript: The Definitive Guide, Chapter 4.9.2](https://bit.ly/3Cvjcw2)
  */
 function compareStrings(str1, str2) {
-  // write your code here & return
+  return str1 === str2;
 }
 
 module.exports = {
